@@ -16,7 +16,8 @@ class Account {
 };
 
 int main() {
-  Account *brembo {nullptr};
+  Account broucques; //object : instance of class Account labeled broucques (l-value)
+  Account *brembo {nullptr}; //pointer to an account obj
   brembo = new Account();
   //first way, dereferencing, then using dot operator:
   (*brembo).name = "brembo";
