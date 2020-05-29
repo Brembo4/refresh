@@ -7,8 +7,12 @@ class Account {
   std::string name;
   double balance {0};
   //methods
-  void withdraw(double);
-  void deposit(double);
+  void withdraw(double amount) {
+    balance -= amount;
+  }
+  void deposit(double amount) {
+    balance += amount;
+  }
 };
 
 int main() {
@@ -23,6 +27,14 @@ int main() {
   brembo->name = "broucques";
   brembo->balance = 50.0;
   std::cout << brembo->name << " " << brembo->balance << std::endl;
+  std::cout << "-----------------------------" << std::endl;
+  std::cout << "withdrawing $20.00" << std::endl;
+  brembo->withdraw(20.00);
+  std::cout << "balance is now $" << brembo->balance << std::endl;
+  std::cout << "-----------------------------" << std::endl;
+  std::cout << "depositing $50.00" << std::endl;
+  brembo->deposit(50.00);
+  std::cout << "balance is now $" << brembo->balance << std::endl;
   delete brembo;
   return 0;
-}
+}// fine :( :( :( :( :( :( :( :( :( :( :( :(
